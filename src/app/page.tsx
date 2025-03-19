@@ -1,4 +1,5 @@
 export default function Home() {
+  console.log("실행실행");
   return (
     <div>
       <h1 className="text-2xl font-bold">My Riot App</h1>

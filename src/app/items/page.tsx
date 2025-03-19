@@ -1,7 +1,13 @@
-import React from "react";
+import { fetchItems } from "@/utils/fetchItems";
+import ItemsList from "@/components/ItemList";
 
-const page = () => {
-  return <div>page</div>;
-};
+export default async function ItemsPage() {
+  const itemsData = await fetchItems();
 
-export default page;
+  return (
+    <div>
+      <h1>아이템 목록</h1>
+      <ItemsList initialData={itemsData} />
+    </div>
+  );
+}
